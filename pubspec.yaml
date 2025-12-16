@@ -1,6 +1,6 @@
 name: cardinal_cli
 description: Official CLI tool for bootstrapping and managing Cardinal Framework projects.
-version: 0.1.0
+version: 0.2.0
 repository: https://github.com/alomia/cardinal_cli
 homepage: https://github.com/alomia/cardinal_cli
 issue_tracker: https://github.com/alomia/cardinal_cli/issues
