@@ -1,3 +1,5 @@
+<img src="https://raw.githubusercontent.com/alomia/cardinal_cli/main/assets/github-header.png" alt="Cardinal header" />
+
 # Cardinal CLI
 
 **The official command-line tool for the Cardinal Framework.**
