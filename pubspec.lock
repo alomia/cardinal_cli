@@ -45,10 +45,10 @@ packages:
     dependency: "direct main"
     description:
       name: cardinal
-      sha256: "35fb0fa4eecf959fd7cce329d5ea1fb462c3d2dd5935e664874152becd6f216c"
+      sha256: "97b78cc334b68a212b37a5006e51b4d9d7bea2cf8109c76c5f157c752c6fc2d3"
       url: "https://pub.dev"
     source: hosted
-    version: "0.3.0"
+    version: "0.4.0"
   cli_config:
     dependency: transitive
     description:
