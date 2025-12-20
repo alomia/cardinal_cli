@@ -1,3 +1,17 @@
+## [0.3.1]
+
+### Updated
+- Updated dependency on `cardinal` framework to `^0.4.0`.
+- Minor adjustments to templates to reflect framework API changes.
+
+### Added
+- Basic tests for `NewCommand` and `AddCommand` to validate project scaffolding and command generation.
+- Temporary test for `InitCommand` (currently marked as pending due to path handling).
+
+### Fixed
+- Resolved minor inconsistencies in project generation templates.
+
+
 ## [0.3.0]
 
 ### Added

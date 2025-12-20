@@ -30,7 +30,7 @@ environment:
 
 # Add regular dependencies here.
 dependencies:
-  cardinal: ^0.3.0
+  cardinal: ^0.4.0
 
 dev_dependencies:
   lints: ^6.0.0
