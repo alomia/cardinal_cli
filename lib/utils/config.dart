@@ -21,10 +21,8 @@ class CardinalCliConfig {
     return CardinalCliConfig(
       commandsDirectory:
           map['structure']?['commands_directory'] ?? 'lib/commands',
-      fileSuffix:
-          map['generation']?['file_suffix'] ?? '_command.dart',
-      classSuffix:
-          map['generation']?['class_suffix'] ?? 'Command',
+      fileSuffix: map['generation']?['file_suffix'] ?? '_command.dart',
+      classSuffix: map['generation']?['class_suffix'] ?? 'Command',
     );
   }
 }

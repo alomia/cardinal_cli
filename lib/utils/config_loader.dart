@@ -1,6 +1,5 @@
 import 'dart:io';
 
-
 import 'package:yaml/yaml.dart';
 
 import 'config.dart';
@@ -19,7 +18,5 @@ CardinalCliConfig loadCliConfig() {
     return CardinalCliConfig.defaults();
   }
 
-  return CardinalCliConfig.fromMap(
-    Map<String, dynamic>.from(yaml),
-  );
+  return CardinalCliConfig.fromMap(Map<String, dynamic>.from(yaml));
 }

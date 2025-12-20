@@ -28,7 +28,10 @@ Future<void> generateFile({
 /// Generates all necessary files for a new Cardinal project.
 Future<void> scaffoldProject(String projectName) async {
   final functionName = 'run${projectName.pascalCase}';
-  final dataRunner = {'projectName': projectName.snakeCase, 'functionName': functionName};
+  final dataRunner = {
+    'projectName': projectName.snakeCase,
+    'functionName': functionName,
+  };
 
   // 1. cardinal.yaml
   await generateFile(

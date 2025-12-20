@@ -4,12 +4,12 @@ import 'package:cardinal_cli/utils/logger.dart';
 
 import '../utils/file_generator.dart';
 
-
 class InitCommand extends CardinalCommand {
   InitCommand()
     : super(
         name: 'init',
-        description: 'Initializes Cardinal configuration in an existing project.',
+        description:
+            'Initializes Cardinal configuration in an existing project.',
       );
 
   @override

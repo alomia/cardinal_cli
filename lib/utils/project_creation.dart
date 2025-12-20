@@ -9,16 +9,18 @@ Future<ProcessResult> createProject(
   String projectName,
   Progress progressLogger,
 ) async {
-  final createResult = await Process.run(
-    'dart', 
-    ['create', projectName, '--template', 'console', '--no-pub'], 
-    runInShell: true,
-  );
+  final createResult = await Process.run('dart', [
+    'create',
+    projectName,
+    '--template',
+    'console',
+    '--no-pub',
+  ], runInShell: true);
 
   if (createResult.exitCode != 0) {
     progressLogger.fail('Failed to run "dart create".');
     // Muestra el error de stdout/stderr para depuración
-    logger.err(createResult.stderr); 
+    logger.err(createResult.stderr);
     exit(1);
   }
 
@@ -36,15 +38,15 @@ Future<void> installDependencies(
     workingDirectory: projectName,
     runInShell: true,
   );
-  
+
   if (installResult.exitCode != 0) {
     progressLogger.fail('Failed to install dependencies.');
-    
+
     // Proporcionar información más útil en caso de fallo
     logger.err(
       'Failed to fetch dependencies (exit code ${installResult.exitCode}).',
     );
-    logger.info('Stderr: ${installResult.stderr}'); 
+    logger.info('Stderr: ${installResult.stderr}');
     logger.info(
       'Please check your network connection or run the following command manually:',
     );

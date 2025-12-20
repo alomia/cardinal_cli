@@ -14,7 +14,6 @@ generation:
   class_suffix: Command
 ''';
 
-
 /// Template for the Dart package metadata file: `pubspec.yaml`.
 ///
 /// **Variables:**
@@ -37,7 +36,6 @@ dev_dependencies:
   test: ^1.25.6
 ''';
 
-
 // --------------------------------------------------------------------------
 // II. ENTRYPOINTS AND BOOTSTRAP (Main Application Files)
 // --------------------------------------------------------------------------
@@ -55,7 +53,6 @@ Future<void> main(List<String> args) async {
   await {{functionName}}(args);
 }
 ''';
-
 
 /// Template for the application bootstrap file: `lib/{{projectName}}.dart`.
 /// Contains the function that configures and runs the `CardinalApp`.
@@ -79,7 +76,6 @@ Future<void> {{functionName}}(List<String> args) async {
   await app.run(args);
 }
 ''';
-
 
 // --------------------------------------------------------------------------
 // III. SCAFFOLDING (Code Generation Templates)
@@ -107,7 +103,6 @@ class {{commandClassName}} extends CardinalCommand {
   }
 }
 ''';
-
 
 /// Template for generating a boilerplate test file.
 ///
