@@ -1,6 +1,0 @@
-structure:
-  commands_directory: lib/commands
-
-generation:
-  file_suffix: _command.dart
-  class_suffix: Command

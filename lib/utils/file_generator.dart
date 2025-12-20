@@ -28,7 +28,7 @@ Future<void> generateFile({
 /// Generates all necessary files for a new Cardinal project.
 Future<void> scaffoldProject(String projectName) async {
   final functionName = 'run${projectName.pascalCase}';
-  final dataRunner = {'projectName': projectName, 'functionName': functionName};
+  final dataRunner = {'projectName': projectName.snakeCase, 'functionName': functionName};
 
   // 1. cardinal.yaml
   await generateFile(
@@ -43,14 +43,14 @@ Future<void> scaffoldProject(String projectName) async {
     rootPath: projectName,
     templateContent: PUBSPEC_YAML_TPL,
     relativePath: 'pubspec.yaml',
-    data: {'projectName': projectName},
+    data: {'projectName': projectName.snakeCase},
   );
 
   // 3. bin/$projectName.dart (Entrypoint)
   await generateFile(
     rootPath: projectName,
     templateContent: ENTRYPOINT_DART_TPL,
-    relativePath: 'bin/$projectName.dart',
+    relativePath: 'bin/${projectName.snakeCase}.dart',
     data: dataRunner,
   );
 
@@ -58,7 +58,7 @@ Future<void> scaffoldProject(String projectName) async {
   await generateFile(
     rootPath: projectName,
     templateContent: APP_DART_TPL,
-    relativePath: 'lib/$projectName.dart',
+    relativePath: 'lib/${projectName.snakeCase}.dart',
     data: dataRunner,
   );
 
@@ -74,7 +74,7 @@ Future<void> scaffoldProject(String projectName) async {
   await generateFile(
     rootPath: projectName,
     templateContent: TEST_DART_TPL,
-    relativePath: 'test/${projectName}_test.dart',
+    relativePath: 'test/${projectName.snakeCase}_test.dart',
     data: {},
   );
 }

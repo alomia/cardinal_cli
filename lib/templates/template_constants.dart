@@ -19,19 +19,18 @@ generation:
 ///
 /// **Variables:**
 /// - `{{projectName}}`: The project's snake_case name (e.g., `fasty_cli`).
-/// - `{{projectDescription}}`: A short sentence describing the project.
 const String PUBSPEC_YAML_TPL = r'''
 name: {{projectName}}
-description: {{projectDescription}}
+description: A new Cardinal project created using the Cardinal CLI.
 version: 1.0.0
 # repository: https://github.com/my_org/my_repo
 
 environment:
-  sdk: ^3.10.1 # Latest stable Dart SDK
+  sdk: ^3.10.1
 
+# Add regular dependencies here.
 dependencies:
-  cardinal: ^0.1.1 # Core framework dependency
-  # Add other core dependencies here.
+  cardinal: ^0.3.0
 
 dev_dependencies:
   lints: ^6.0.0
@@ -66,16 +65,13 @@ Future<void> main(List<String> args) async {
 /// - `{{functionName}}`: The name of the bootstrap function (e.g., `runApp`).
 const String APP_DART_TPL = r'''
 import 'package:cardinal/cardinal.dart';
-import 'package:{{projectName}}/commands/hello_command.dart'; // Initial example command
+import 'package:{{projectName}}/commands/hello_command.dart';
 
 Future<void> {{functionName}}(List<String> args) async {
-  // Configure the CLI application's metadata and commands
   final app = CardinalApp(
     name: '{{projectName}}',
     description: 'A command line application built with the Cardinal framework.', 
-    version: '1.0.0', // Consider reading this from pubspec.yaml in a real app
     commands: [
-      // Add initial commands here
       HelloCommand(),
     ],
   );

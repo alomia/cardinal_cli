@@ -8,13 +8,10 @@ A powerful and zero-setup CLI for bootstrapping, managing, and generating files 
 
 ## Key Features
 
-- Quick Start: Scaffold a complete, runnable Cardinal project structure in seconds using cardinal new.
-
-- Code Generation: Easily add new commands and file templates to an existing project with cardinal add.
-
-- Initialization: Configure the full Cardinal structure within any existing Dart project using cardinal init.
-
-- Zero Boilerplate: Focused on Developer Experience (DX) to let you concentrate on your command logic, not setup.
+- **Quick Start**: Scaffold a complete, runnable Cardinal project in seconds using `cardinal new`.
+- **Code Generation**: Add new commands and templates to an existing project with `cardinal add`.
+- **Initialization**: Configure Cardinal inside any existing Dart project using `cardinal init`.
+- **Zero Boilerplate**: Focus on command logic, not setup.
 
 ## Installation
 
@@ -56,7 +53,7 @@ cardinal init
 Use `add` to automatically generate the boilerplate for a new command class. The CLI creates the file in `lib/commands/` and registers it in the main command runner.
 
 ```bash
-# Usage: cardinal add command <command_name>
+# Usage: cardinal add <command_name>
 cardinal add login
 ```
 
@@ -68,7 +65,7 @@ Your CLI supports the following primary commands:
 |:-------------|:-------------------------------------------------------------------------------|
 | `new`        | Creates a complete, ready-to-run new project structure.                        |
 | `init`       | Initializes and configures the core Cardinal structure in an existing project. |
-| `add`        | Adds a new template to the current project.                                    |
+| `add`        | Generates a new command inside the current project. project.                   |
 
 ## Framework Dependency
 

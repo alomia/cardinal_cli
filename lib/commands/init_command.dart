@@ -9,7 +9,7 @@ class InitCommand extends CardinalCommand {
   InitCommand()
     : super(
         name: 'init',
-        description: 'Creates and configures the new Cardinal project.',
+        description: 'Initializes Cardinal configuration in an existing project.',
       );
 
   @override
